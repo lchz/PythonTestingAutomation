@@ -10,9 +10,9 @@ class TestCalculation(unittest.TestCase):
         self.assertEqual(multiply(3,4), 12)
 
     def test_power(self):
-        # self.assertEqual(power(2,8), 256)
+        self.assertEqual(power(2,8), 256)
 
-        self.assertEqual(power(2,7), 256)
+        # self.assertEqual(power(2,7), 256)
 
 if __name__ == '__main__':
     unittest.main()
