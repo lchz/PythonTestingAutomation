@@ -1,0 +1,24 @@
+name: Python Testing Automation
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v3
+      with:
+        python-version: 3.12
+
+    - name: Run tests
+      run: |
+        python -m unittest discover -s Test -p "codeTest.py"
+
