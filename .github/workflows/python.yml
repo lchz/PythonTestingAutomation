@@ -20,7 +20,10 @@ jobs:
       with:
         python-version: 3.12
 
-    - name: Run tests
+    - name: Run unittest
       run: |
         python -m unittest discover -s Test -p "codeTest.py"
+    
+    - name: Run pytest
+      run: pytest
 
